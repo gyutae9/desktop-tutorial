@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+// 점수의 총합을 계산하는 함수
+int calculateSum(int numbers[], int size) {
+    int total = 0;
+    for (int i = 0; i < size; i++) {
+        total += numbers[i];
+    }
+    return total;
+}
+
+// 총합의 평균을 계산하는 함수
+double calculateAverage(int numbers[], int size) {
+    return calculateSum(numbers, size) / (double)size;
+}
+
+int main() {
+    int numbers[5] = {0, };
+    for (int i = 0; i < 5; i++)
+    {
+        cout << i + 1 << "번째 점수입력:";
+        cin >> numbers[i];
+    }
+
+    cout << "총합" << calculateSum(numbers, 5) << endl;
+
+    cout << "총합의 평균: " << calculateAverage(numbers, 5) << endl;
+
+    return 0;
+}
