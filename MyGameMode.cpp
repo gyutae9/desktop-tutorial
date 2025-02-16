@@ -4,6 +4,7 @@
 #include "MyGameMode.h"
 #include "MyCharacter.h"
 #include "MyPlayerController.h"
+#include "SpartaGameState.h"
 
 
 AMyGameMode::AMyGameMode()
@@ -11,5 +12,5 @@ AMyGameMode::AMyGameMode()
 	DefaultPawnClass = AMyCharacter::StaticClass();
 	PlayerControllerClass = AMyPlayerController::StaticClass();
 
-	
+	GameStateClass = ASpartaGameState::StaticClass();
 }
